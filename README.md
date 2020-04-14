@@ -58,8 +58,8 @@ as \$WORKING_FOLDER from now on
 
 ### Steps
 
--   Download config-azrulhasni.yaml into \$WORKING_FOLDER. This yams file is
-    Helm configuration file
+-   Download config-azrulhasni.yaml into \$WORKING_FOLDER. This yaml file is
+    Helm's configuration file
 
 -   JSON Remote Claim Mapper is already integrated into the azrulhasni/keycloak
     image. The config-azrulhasni.yaml will use that image for installation. To
@@ -160,7 +160,7 @@ Testing
 
 -   Copy the \<long access token\>
 
--   Visit https://jwt.io. Copy the access token to the ‘Encoded Field'
+-   Visit https://jwt.io. Paste the access token into the ‘Encoded’ field
 
 ![](README.images/1I1cLj.jpg)
 
@@ -190,7 +190,7 @@ Building on your own
 ### Steps
 
 -   Follow the instructions in
-    \<https://github.com/groupe-sii/keycloak-json-remote-claim \>to obtain 3
+    [https://github.com/groupe-sii/keycloak-json-remote-claim] to obtain 3
     files:
 
     -   standalone.xml
@@ -211,8 +211,8 @@ Building on your own
 
     ![](README.images/E7hxNc.jpg)
 
-    -   To copy our files to their respective folders as instructed, we leverage
-        on COPY instruction. Add these instructions just above ‘USER 1000'
+    -   To copy our files to their respective folders as instructed, we will use
+        the COPY instruction. Add these instructions just above ‘USER 1000'
 
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     COPY json-remote-claim.jar /opt/jboss/keycloak/modules/system/layers/base/fr/sii/keycloak/mapper/json-remote-claim/main/
