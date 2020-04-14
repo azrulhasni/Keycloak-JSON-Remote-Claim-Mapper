@@ -119,8 +119,9 @@ Testing
 
     -   Turn on Send client ID
 
-    -   Set URL to http://echoquery-http.default.svc.local:13600/echo/query.
-        This is the internal URL of the Echo Query service
+    -   Set URL to
+        <http://echoquery-http.default.svc.cluster.local:13600/echo/query>. This
+        is the internal URL of the Echo Query service
 
     -   Save  
         
