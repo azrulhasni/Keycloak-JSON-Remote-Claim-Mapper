@@ -104,7 +104,8 @@ Testing
 -   You can access Keycloak at http://localhost:8080/auth
 
 -   Create your own Realm, Client and Users. Follow this tutorial if you need
-    more detailed instructions [<https://www.baeldung.com/spring-boot-keycloak]>
+    more detailed instructions
+    [\<https://www.baeldung.com/spring-boot-keycloak]\>
 
 -   Go to Clients \> [Your client id] \> Mappers \> ‘Create’ button.
 
@@ -123,8 +124,7 @@ Testing
         <http://echoquery-http.default.svc.cluster.local:13600/echo/query>. This
         is the internal URL of the Echo Query service
 
-    -   Save  
-        
+    -   Save
 
 ![](README.images/CGZL8T.jpg)
 
@@ -233,4 +233,21 @@ Building on your own
 > docker push <your docker id>/keycloak:9.0.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--   Run the installation instructions above to install
+-   Then download values.yml from Codecentric Keycloak Helm repository
+    <https://github.com/codecentric/helm-charts/blob/master/charts/keycloak/values.yaml>
+
+-   Change the repository to point to your own image. Save the file as
+    config-\<your docker id\>.yml.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+keycloak:
+  replicas: 1
+
+  image:
+    repository: <your docker id>/keycloak
+    tag: 9.0.2
+    pullPolicy: IfNotPresent
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-   Run the installation instructions above to install. Make sure you use your
+    own config-\<your docker id\>.yml file.
