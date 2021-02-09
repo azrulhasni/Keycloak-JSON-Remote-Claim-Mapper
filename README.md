@@ -188,17 +188,23 @@ Building on your own
 
  
 
+ 
+
 ### Steps
 
 -   Follow the instructions in
     [https://github.com/groupe-sii/keycloak-json-remote-claim] to obtain 3
-    files:
+    files. Put the 3 files under the \$WORKING_FOLDER:
 
     -   standalone.xml
 
     -   module.xml
 
     -   json-remote-claim.jar
+
+-   You will also need the tools folder. Download the tools folder from
+    <https://github.com/keycloak/keycloak-containers/tree/master/server/tools
+    >and put the folder under \$WORKING_FOLDER
 
 -   We would also need the Keycloak Dockerfile. Go to and copy the content of
     the tab Dockerfile to a an empty text file called Dockerfile. Place
